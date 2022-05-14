@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         List<Callable<Integer>> callableList = new ArrayList<>();
-        Callable<Integer> callable1 = new MyThread();
-        Callable<Integer> callable2 = new MyThread();
-        Callable<Integer> callable3 = new MyThread();
-        Callable<Integer> callable4 = new MyThread();
+        Callable<Integer> callable1 = new MyCallable();
+        Callable<Integer> callable2 = new MyCallable();
+        Callable<Integer> callable3 = new MyCallable();
+        Callable<Integer> callable4 = new MyCallable();
         callableList.add(callable1);
         callableList.add(callable2);
         callableList.add(callable3);
